@@ -40,6 +40,7 @@
             this.UploadButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.RefreshButton = new System.Windows.Forms.Button();
+            this.TextOutput = new System.Windows.Forms.Label();
             ServerTabControl = new System.Windows.Forms.TabControl();
             serverTabPage = new System.Windows.Forms.TabPage();
             ServerTabControl.SuspendLayout();
@@ -171,13 +172,22 @@
             this.RefreshButton.TabIndex = 5;
             this.RefreshButton.Text = "Refresh";
             this.RefreshButton.UseVisualStyleBackColor = true;
-            this.RefreshButton.Click += new System.EventHandler(this.RefreshGameLists);
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // TextOutput
+            // 
+            this.TextOutput.AutoSize = true;
+            this.TextOutput.Location = new System.Drawing.Point(70, 12);
+            this.TextOutput.Name = "TextOutput";
+            this.TextOutput.Size = new System.Drawing.Size(0, 13);
+            this.TextOutput.TabIndex = 6;
             // 
             // GameManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 709);
+            this.Controls.Add(this.TextOutput);
             this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.UploadButton);
@@ -192,6 +202,7 @@
             this.cTabPage.ResumeLayout(false);
             this.dTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -207,6 +218,7 @@
         private System.Windows.Forms.ListBox DDriveListBox;
         private System.Windows.Forms.ListBox ServerListBox;
         private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.Label TextOutput;
     }
 }
 
